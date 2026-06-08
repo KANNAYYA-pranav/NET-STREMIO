@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NET STREMIO - Movie Trailers</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">NET STREMIO</div>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search movies...">
+                <button onclick="searchMovies()">Search</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="hero-banner" id="heroBanner">
+        <div class="hero-content">
+            <h1 id="heroTitle">Welcome to NET STREMIO</h1>
+            <p id="heroDescription">Discover amazing movie trailers</p>
+            <button class="play-btn" onclick="playHeroTrailer()">▶ Watch Trailer</button>
+        </div>
+    </div>
+
+    <!-- Movie Sections -->
+    <div class="container">
+        <!-- Trending Now -->
+        <section class="movie-section">
+            <h2>Trending Now</h2>
+            <div class="movies-row" id="trendingMovies"></div>
+        </section>
+
+        <!-- Action Movies -->
+        <section class="movie-section">
+            <h2>Action Movies</h2>
+            <div class="movies-row" id="actionMovies"></div>
+        </section>
+
+        <!-- Comedy Movies -->
+        <section class="movie-section">
+            <h2>Comedy Movies</h2>
+            <div class="movies-row" id="comedyMovies"></div>
+        </section>
+
+        <!-- Thriller Movies -->
+        <section class="movie-section">
+            <h2>Thriller Movies</h2>
+            <div class="movies-row" id="thrillerMovies"></div>
+        </section>
+    </div>
+
+    <!-- Movie Modal (Popup) -->
+    <div id="movieModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <iframe id="trailerFrame" width="100%" height="600" src="" frameborder="0" allowfullscreen></iframe>
+            <div class="movie-info">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+                <p id="modalRating"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
